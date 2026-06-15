@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrong Way Customs | Kontakt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100" style="font-family: 'Inter', sans-serif;">
 
     <!-- Header -->
     <header class="bg-black/60 backdrop-blur sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex items-center justify-between p-4 flex-wrap md:flex-nowrap gap-3">
-        
+
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
           <img
-            src="images/logo_schwarz_2.jpeg"
+            src="images/logo.png"
             alt="Wrong Way Customs Logo"
-            class="h-8 object-cover rounded-xl"
+            class="h-8 object-contain"
           />
-          <h1 class="text-xl tracking-wide whitespace-nowrap">
+          <h1 class="text-xl font-semibold tracking-wide whitespace-nowrap">
             Wrong Way
           </h1>
         </a>
@@ -32,13 +35,13 @@
         <!-- Navigation -->
         <nav
           id="navMenu"
-          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase transition-all duration-300 ease-in-out"
+          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase font-medium tracking-wider transition-all duration-300 ease-in-out"
         >
-          <a href="index.html" class="hover:text-red-500">Home</a>
-          <a href="team.html" class="hover:text-red-500">Team</a>
-          <a href="strecken.html" class="hover:text-red-500">Strecken</a>
-          <a href="galerie.html" class="hover:text-red-500">Galerie</a>
-          <a href="kontakt.html" class="hover:text-red-500">Kontakt</a>
+          <a href="index.html" class="hover:text-lime-400 transition-colors">Home</a>
+          <a href="team.html" class="hover:text-lime-400 transition-colors">Team</a>
+          <a href="strecken.html" class="hover:text-lime-400 transition-colors">Strecken</a>
+          <a href="galerie.html" class="hover:text-lime-400 transition-colors">Galerie</a>
+          <a href="kontakt.html" class="text-lime-500">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -48,24 +51,28 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
       const navMenu = document.getElementById('navMenu');
-
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
       });
     });
     </script>
 
-    <!-- Contact -->
-    <section id="kontakt" class="bg-black py-16 px-6 text-center">
-        <h3 class="text-2xl font-semibold mb-4">Kontakt</h3>
-        <p class="text-slate-400 mb-6">Wenn ihr Fragen zum Einstieg in den Motorsport habt, ihr euch dafür interessiert an welchen Events wir teilnehmen oder uns einfach nur kennelernen wollt, zögert nicht uns zu kontaktieren.</p>
-        <a href="mailto:info.wrongway@gmail.com" class="text-lime-500 text-decoration: underline hover:text-lime-600">info.wrongway@gmail.com</a>
-        <!--p class="text-slate-400 mb-6">oder nutzt direkt unser Kontaktformular:</p>
-        <a class="inline-block bg-lime-500 hover:bg-lime-600 px-8 py-3 rounded-xl font-semibold">Jetzt anfragen - KONTAKTFORMULAR DIREKT AUF WEBSITE ERSTELLEN</a-->
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-24 px-6">
+      <div class="max-w-2xl mx-auto bg-slate-900 rounded-2xl p-10 text-center shadow-lg">
+        <h2 class="text-3xl font-semibold mb-4">Melde dich bei uns</h2>
+        <p class="text-slate-400 mb-10 leading-relaxed">
+          Fragen zum Einstieg in den Motorsport? Neugierig auf unsere Events?
+          Oder einfach Lust, uns kennenzulernen? Wir freuen uns über jede Nachricht.
+        </p>
+        <a href="mailto:info.wrongway@gmail.com" class="inline-block bg-lime-500 hover:bg-lime-600 text-black font-semibold px-10 py-4 rounded-xl transition-colors tracking-wide">
+          info.wrongway@gmail.com
+        </a>
+      </div>
     </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-slate-500 text-sm text-center py-4">
+  <footer class="bg-black text-slate-500 text-sm text-center py-6">
     © 2026 Wrong Way
   </footer>
 

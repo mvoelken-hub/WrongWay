@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrong Way | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100" style="font-family: 'Inter', sans-serif;">
 
     <!-- Header -->
     <header class="bg-black/60 backdrop-blur sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex items-center justify-between p-4 flex-wrap md:flex-nowrap gap-3">
-        
+
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
           <img
-            src="images/logo_schwarz_2.jpeg"
+            src="images/logo.png"
             alt="Wrong Way Customs Logo"
-            class="h-8 object-cover rounded-xl"
+            class="h-8 object-contain"
           />
-          <h1 class="text-xl tracking-wide whitespace-nowrap">
+          <h1 class="text-xl font-semibold tracking-wide whitespace-nowrap">
             Wrong Way
           </h1>
         </a>
@@ -32,13 +35,13 @@
         <!-- Navigation -->
         <nav
           id="navMenu"
-          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase transition-all duration-300 ease-in-out"
+          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase font-medium tracking-wider transition-all duration-300 ease-in-out"
         >
-          <a href="index.html" class="hover:text-red-500">Home</a>
-          <a href="team.html" class="hover:text-red-500">Team</a>
-          <a href="strecken.html" class="hover:text-red-500">Strecken</a>
-          <a href="galerie.html" class="hover:text-red-500">Galerie</a>
-          <a href="kontakt.html" class="hover:text-red-500">Kontakt</a>
+          <a href="index.html" class="text-lime-500">Home</a>
+          <a href="team.html" class="hover:text-lime-400 transition-colors">Team</a>
+          <a href="strecken.html" class="hover:text-lime-400 transition-colors">Strecken</a>
+          <a href="galerie.html" class="hover:text-lime-400 transition-colors">Galerie</a>
+          <a href="kontakt.html" class="hover:text-lime-400 transition-colors">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -48,74 +51,83 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
       const navMenu = document.getElementById('navMenu');
-
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
       });
     });
     </script>
 
-  <!-- Home -->
-<section class="relative h-[70vh] flex items-center justify-center text-center">
-  <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black"></div>
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center bg-slate-950 px-6 py-16">
+    <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
 
-  <!-- Video Links (ganz außen) -->
-  <div class="absolute left-6 top-0 bottom-0 hidden md:flex items-center">
-    <video 
-      src="videos/team.mp4" 
-      autoplay 
-      loop 
-      muted 
-      playsinline
-      class="h-[80%] w-auto rounded-xl object-cover"
-    ></video>
-  </div>
+      <!-- Video (links, mit natürlichem Seitenverhältnis) -->
+      <div>
+        <video
+          src="videos/team.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full rounded-2xl shadow-2xl"
+        ></video>
+      </div>
 
-  <!-- Logo + Button (Mitte) -->
-  <div class="relative flex flex-col items-center px-6">
-    <img
-      src="images/logo_schwarz_2.jpeg"
-      alt="Team_Mischa"
-      class="w-full h-128 object-contain rounded-xl mb-12"
-    />
-    <a href="team.html" class="inline-block bg-lime-500 hover:bg-lime-600 px-8 py-3 rounded-xl font-semibold">
-      Lerne uns kennen
-    </a>
-  </div>
+      <!-- Inhalt (rechts) -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <img
+          src="images/logo.png"
+          alt="Wrong Way Customs"
+          class="h-32 md:h-40 object-contain mb-6"
+        />
+        <p class="text-slate-300 text-lg mb-8 max-w-sm leading-relaxed">
+          Benzin im Blut. Asphalt unter den Rädern.
+        </p>
+        <a href="team.html" class="inline-block bg-lime-500 hover:bg-lime-600 text-black px-10 py-4 rounded-xl font-semibold tracking-wide transition-colors">
+          Lerne uns kennen
+        </a>
+      </div>
 
-  <!-- Video Rechts (ganz außen) -->
-  <div class="absolute right-6 top-0 bottom-0 hidden md:flex items-center">
-    <video 
-      src="videos/team.mp4" 
-      autoplay 
-      loop 
-      muted 
-      playsinline
-      class="h-[80%] w-auto rounded-xl object-cover"
-    ></video>
-  </div>
+    </div>
+  </section>
 
-</section>
-
-  <!-- About us -->
-  <section id="about_us" class="bg-slate-900 py-20 px-6">
+  <!-- Über uns -->
+  <section id="about_us" class="bg-slate-900 py-24 px-6">
     <div class="max-w-7xl mx-auto">
-      <h3 class="text-3xl font-semibold mb-8">Über uns</h3>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div>
-          <h4 class="text-2xl font-semibold mb-4">Wir sind...</h4>
-          <ul class="space-y-3 text-slate-300">
-            <li>• ein Team mit Benzin im Blut</li>
-            <li>• detailverliebt bei Technik, Linie und Setup</li>
-            <li>• erfahren auf Landstraße, Rennstrecke und Kartbahn</li>
+      <h2 class="text-3xl font-semibold mb-12">Über uns</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-800 rounded-2xl p-8">
+          <h3 class="text-xl font-semibold mb-5 text-lime-500">Wir sind...</h3>
+          <ul class="space-y-4 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-lime-500 mt-0.5 shrink-0">▸</span>
+              <span>ein Team mit Benzin im Blut</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lime-500 mt-0.5 shrink-0">▸</span>
+              <span>detailverliebt bei Technik, Linie und Setup</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lime-500 mt-0.5 shrink-0">▸</span>
+              <span>erfahren auf Landstraße, Rennstrecke und Kartbahn</span>
+            </li>
           </ul>
         </div>
-        <div>
-          <h4 class="text-2xl font-semibold mb-4">Wir wollen...</h4>
-          <ul class="space-y-3 text-slate-300">
-            <li>• Spaß am Motorsport verbreiten</li>
-            <li>• sauberes Fahren und gute Technik fördern</li>
-            <li>• eine Community aufbauen, die sich gegenseitig unterstützt</li>
+        <div class="bg-slate-800 rounded-2xl p-8">
+          <h3 class="text-xl font-semibold mb-5 text-lime-500">Wir wollen...</h3>
+          <ul class="space-y-4 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-lime-500 mt-0.5 shrink-0">▸</span>
+              <span>Spaß am Motorsport verbreiten</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lime-500 mt-0.5 shrink-0">▸</span>
+              <span>sauberes Fahren und gute Technik fördern</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lime-500 mt-0.5 shrink-0">▸</span>
+              <span>eine Community aufbauen, die sich gegenseitig unterstützt</span>
+            </li>
           </ul>
         </div>
       </div>

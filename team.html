@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrong Way Customs | Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100" style="font-family: 'Inter', sans-serif;">
 
     <!-- Header -->
     <header class="bg-black/60 backdrop-blur sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex items-center justify-between p-4 flex-wrap md:flex-nowrap gap-3">
-        
+
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
           <img
-            src="images/logo_schwarz_2.jpeg"
+            src="images/logo.png"
             alt="Wrong Way Customs Logo"
-            class="h-8 object-cover rounded-xl"
+            class="h-8 object-contain"
           />
-          <h1 class="text-xl tracking-wide whitespace-nowrap">
+          <h1 class="text-xl font-semibold tracking-wide whitespace-nowrap">
             Wrong Way
           </h1>
         </a>
@@ -32,13 +35,13 @@
         <!-- Navigation -->
         <nav
           id="navMenu"
-          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase transition-all duration-300 ease-in-out"
+          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase font-medium tracking-wider transition-all duration-300 ease-in-out"
         >
-          <a href="index.html" class="hover:text-red-500">Home</a>
-          <a href="team.html" class="hover:text-red-500">Team</a>
-          <a href="strecken.html" class="hover:text-red-500">Strecken</a>
-          <a href="galerie.html" class="hover:text-red-500">Galerie</a>
-          <a href="kontakt.html" class="hover:text-red-500">Kontakt</a>
+          <a href="index.html" class="hover:text-lime-400 transition-colors">Home</a>
+          <a href="team.html" class="text-lime-500">Team</a>
+          <a href="strecken.html" class="hover:text-lime-400 transition-colors">Strecken</a>
+          <a href="galerie.html" class="hover:text-lime-400 transition-colors">Galerie</a>
+          <a href="kontakt.html" class="hover:text-lime-400 transition-colors">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -48,7 +51,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
       const navMenu = document.getElementById('navMenu');
-
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
       });
@@ -57,48 +59,141 @@
 
     <!-- Team -->
     <section id="team" class="max-w-7xl mx-auto py-20 px-6">
-        <h3 class="text-3xl font-semibold mb-8">Unser Team</h3>
+        <h2 class="text-3xl font-semibold mb-10">Unser Team</h2>
         <div class="grid md:grid-cols-2 gap-8">
+
         <!-- Mischa -->
         <div class="flex flex-col bg-slate-900 rounded-2xl p-6">
             <img
-            src=images/team/team_mischa.JPG
-            alt="Team_Mischa"
-            class="w-full h-100 object-cover rounded-xl mb-4"
+              src="images/team/team_mischa.JPG"
+              alt="Team_Mischa"
+              class="w-full h-72 object-cover rounded-xl mb-5" style="object-position: center 25%;"
             />
-            <p class="font-semibold">Michael</p>
-            <p class="text-slate-400">Bike: Kawasaki ZX10R, Aprilia RSV4 <br>Pitbike: MRF 140 SM <br>Startnummer: 116 <br>Lieblingsstrecke: Circuit Zolder, Assen, Oschersleben <br>Erfahrung: seit 2003 <br>Fun Fact: Liegt öfter quer als gerade</p>
+            <p class="font-semibold text-lg mb-1">Michael</p>
+            <p class="text-lime-500 text-sm font-medium mb-4"># 116</p>
+            <dl class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Bike</dt>
+                <dd class="text-slate-300">Kawasaki ZX10R, Aprilia RSV4</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Pitbike</dt>
+                <dd class="text-slate-300">MRF 140 SM</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Lieblingsstrecke</dt>
+                <dd class="text-slate-300">Circuit Zolder, Assen, Oschersleben</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Erfahrung</dt>
+                <dd class="text-slate-300">seit 2003</dd>
+              </div>
+              <div class="flex gap-2 pt-3 border-t border-slate-800 mt-1">
+                <dt class="text-slate-500 w-36 shrink-0">Fun Fact</dt>
+                <dd class="text-slate-400 italic">Liegt öfter quer als gerade</dd>
+              </div>
+            </dl>
         </div>
+
         <!-- Marc -->
         <div class="flex flex-col bg-slate-900 rounded-2xl p-6">
             <img
-            src=images/team/team_marc.JPG
-            alt="Team_Marc"
-            class="w-full h-100 object-cover rounded-xl mb-4"
+              src="images/team/team_marc.JPG"
+              alt="Team_Marc"
+              class="w-full h-72 object-cover rounded-xl mb-5" style="object-position: center 25%;"
             />
-            <p class="font-semibold">Marc</p>
-            <p class="text-slate-400">Bike: BMW S1000 RR, Kawasaki ZX6R <br>Pitbike: MRF 140 SM <br>Startnummer: 31 <br>Lieblingsstrecke: Oschersleben <br>Erfahrung: seit 2012 <br>Fun Fact: 100% Glück, 0% Können</p>
+            <p class="font-semibold text-lg mb-1">Marc</p>
+            <p class="text-lime-500 text-sm font-medium mb-4"># 31</p>
+            <dl class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Bike</dt>
+                <dd class="text-slate-300">BMW S1000 RR, Kawasaki ZX6R</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Pitbike</dt>
+                <dd class="text-slate-300">MRF 140 SM</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Lieblingsstrecke</dt>
+                <dd class="text-slate-300">Oschersleben</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Erfahrung</dt>
+                <dd class="text-slate-300">seit 2012</dd>
+              </div>
+              <div class="flex gap-2 pt-3 border-t border-slate-800 mt-1">
+                <dt class="text-slate-500 w-36 shrink-0">Fun Fact</dt>
+                <dd class="text-slate-400 italic">100% Glück, 0% Können</dd>
+              </div>
+            </dl>
         </div>
+
         <!-- Pascal -->
         <div class="flex flex-col bg-slate-900 rounded-2xl p-6">
             <img
-            src=images/team/team_pascal.jpg
-            alt="Team_Pascal"
-            class="w-full h-100 object-cover rounded-xl mb-4"
+              src="images/team/team_pascal.jpg"
+              alt="Team_Pascal"
+              class="w-full h-72 object-cover rounded-xl mb-5" style="object-position: center 25%;"
             />
-            <p class="font-semibold">Pascal</p>
-            <p class="text-slate-400">Bike: Kawasaki ZX10R <br>Pitbike: MRF 140 SM <br>Startnummer: 117 <br>Lieblingsstrecke: Straße<br>Erfahrung: seit 2025 <br>Fun Fact: Knie sind weicher als Asphalt</p>
+            <p class="font-semibold text-lg mb-1">Pascal</p>
+            <p class="text-lime-500 text-sm font-medium mb-4"># 117</p>
+            <dl class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Bike</dt>
+                <dd class="text-slate-300">Kawasaki ZX10R</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Pitbike</dt>
+                <dd class="text-slate-300">MRF 140 SM</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Lieblingsstrecke</dt>
+                <dd class="text-slate-300">Straße</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Erfahrung</dt>
+                <dd class="text-slate-300">seit 2025</dd>
+              </div>
+              <div class="flex gap-2 pt-3 border-t border-slate-800 mt-1">
+                <dt class="text-slate-500 w-36 shrink-0">Fun Fact</dt>
+                <dd class="text-slate-400 italic">Knie sind weicher als Asphalt</dd>
+              </div>
+            </dl>
         </div>
+
         <!-- Vivi -->
         <div class="flex flex-col bg-slate-900 rounded-2xl p-6">
             <img
-            src="images/team/team_vivi.jpg"
-            alt="Team_Vivi"
-            class="w-full h-100 object-cover rounded-xl mb-4"
+              src="images/team/team_vivi.jpg"
+              alt="Team_Vivi"
+              class="w-full h-72 object-cover rounded-xl mb-5" style="object-position: center 25%;"
             />
-            <p class="font-semibold">Vivien</p>
-            <p class="text-slate-400">Bike: Kawasaki Z 750S <br>Pitbike: MRF 140 SM <br>Startnummer: 26 <br>Lieblingsstrecke: Straße <br>Erfahrung: seit 2024 <br>Fun Fact: In Kurven gilt - links Hui, rechts Pfui</p>
+            <p class="font-semibold text-lg mb-1">Vivien</p>
+            <p class="text-lime-500 text-sm font-medium mb-4"># 26</p>
+            <dl class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Bike</dt>
+                <dd class="text-slate-300">Kawasaki Z 750S</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Pitbike</dt>
+                <dd class="text-slate-300">MRF 140 SM</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Lieblingsstrecke</dt>
+                <dd class="text-slate-300">Straße</dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="text-slate-500 w-36 shrink-0">Erfahrung</dt>
+                <dd class="text-slate-300">seit 2024</dd>
+              </div>
+              <div class="flex gap-2 pt-3 border-t border-slate-800 mt-1">
+                <dt class="text-slate-500 w-36 shrink-0">Fun Fact</dt>
+                <dd class="text-slate-400 italic">In Kurven gilt – links Hui, rechts Pfui</dd>
+              </div>
+            </dl>
         </div>
+
         </div>
     </section>
 
