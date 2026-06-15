@@ -4,23 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrong Way Customs | Galerie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/gallery.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100" style="font-family: 'Inter', sans-serif;">
 
     <!-- Header -->
     <header class="bg-black/60 backdrop-blur sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex items-center justify-between p-4 flex-wrap md:flex-nowrap gap-3">
-        
+
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
           <img
-            src="images/logo_schwarz_2.jpeg"
+            src="images/logo.png"
             alt="Wrong Way Customs Logo"
-            class="h-8 object-cover rounded-xl"
+            class="h-8 object-contain"
           />
-          <h1 class="text-xl tracking-wide whitespace-nowrap">
+          <h1 class="text-xl font-semibold tracking-wide whitespace-nowrap">
             Wrong Way
           </h1>
         </a>
@@ -33,13 +36,13 @@
         <!-- Navigation -->
         <nav
           id="navMenu"
-          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase transition-all duration-300 ease-in-out"
+          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase font-medium tracking-wider transition-all duration-300 ease-in-out"
         >
-          <a href="index.html" class="hover:text-red-500">Home</a>
-          <a href="team.html" class="hover:text-red-500">Team</a>
-          <a href="strecken.html" class="hover:text-red-500">Strecken</a>
-          <a href="galerie.html" class="hover:text-red-500">Galerie</a>
-          <a href="kontakt.html" class="hover:text-red-500">Kontakt</a>
+          <a href="index.html" class="hover:text-lime-400 transition-colors">Home</a>
+          <a href="team.html" class="hover:text-lime-400 transition-colors">Team</a>
+          <a href="strecken.html" class="hover:text-lime-400 transition-colors">Strecken</a>
+          <a href="galerie.html" class="text-lime-500">Galerie</a>
+          <a href="kontakt.html" class="hover:text-lime-400 transition-colors">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -49,27 +52,21 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
       const navMenu = document.getElementById('navMenu');
-
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
       });
     });
     </script>
 
-<!-- Galerie -->
+    <!-- Galerie -->
     <section id="galerie" class="max-w-7xl mx-auto py-20 px-4">
-        <!-- Pitbike -->
-        <h3 class="text-3xl font-semibold mb-8">Galerie</h3>
+        <h2 class="text-3xl font-semibold mb-10">Galerie</h2>
 
         <section id="gallery">
           <div class="gallery-grid" id="galleryGrid"></div>
         </section>
 
         <script src="js/gallery.js" defer></script>
-        <!--div class="grid md:grid-cols-1 gap-8"-->
-        <!--div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-        </div-->
-        </div>
     </section>
 
   <!-- Footer -->
@@ -79,10 +76,10 @@
 
 <!-- Lightbox Overlay -->
 <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-    <button id="closeLightbox" class="absolute top-5 right-8 text-4xl">&times;</button>
+    <button id="closeLightbox" class="absolute top-5 right-8 text-4xl text-white/70 hover:text-white transition-colors">&times;</button>
 
-    <button id="prevBtn" class="absolute left-8 text-5xl">&#10094;</button>
-    <button id="nextBtn" class="absolute right-8 text-5xl">&#10095;</button>
+    <button id="prevBtn" class="absolute left-8 text-5xl text-white/70 hover:text-white transition-colors">&#10094;</button>
+    <button id="nextBtn" class="absolute right-8 text-5xl text-white/70 hover:text-white transition-colors">&#10095;</button>
 
     <img id="lightboxImage" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-xl" />
 </div>

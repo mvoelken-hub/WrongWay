@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrong Way Customs | Strecken</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-950 text-slate-100" style="font-family: 'Inter', sans-serif;">
 
     <!-- Header -->
     <header class="bg-black/60 backdrop-blur sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex items-center justify-between p-4 flex-wrap md:flex-nowrap gap-3">
-        
+
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
           <img
-            src="images/logo_schwarz_2.jpeg"
+            src="images/logo.png"
             alt="Wrong Way Customs Logo"
-            class="h-8 object-cover rounded-xl"
+            class="h-8 object-contain"
           />
-          <h1 class="text-xl tracking-wide whitespace-nowrap">
+          <h1 class="text-xl font-semibold tracking-wide whitespace-nowrap">
             Wrong Way
           </h1>
         </a>
@@ -32,13 +35,13 @@
         <!-- Navigation -->
         <nav
           id="navMenu"
-          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase transition-all duration-300 ease-in-out"
+          class="hidden w-full md:w-auto md:flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-sm uppercase font-medium tracking-wider transition-all duration-300 ease-in-out"
         >
-          <a href="index.html" class="hover:text-red-500">Home</a>
-          <a href="team.html" class="hover:text-red-500">Team</a>
-          <a href="strecken.html" class="hover:text-red-500">Strecken</a>
-          <a href="galerie.html" class="hover:text-red-500">Galerie</a>
-          <a href="kontakt.html" class="hover:text-red-500">Kontakt</a>
+          <a href="index.html" class="hover:text-lime-400 transition-colors">Home</a>
+          <a href="team.html" class="hover:text-lime-400 transition-colors">Team</a>
+          <a href="strecken.html" class="text-lime-500">Strecken</a>
+          <a href="galerie.html" class="hover:text-lime-400 transition-colors">Galerie</a>
+          <a href="kontakt.html" class="hover:text-lime-400 transition-colors">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -48,101 +51,110 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
       const navMenu = document.getElementById('navMenu');
-
       menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
       });
     });
     </script>
 
-    <!-- Track Section -->
+    <!-- Strecken -->
     <section id="strecken" class="max-w-7xl mx-auto py-20 px-6">
-        <!-- Pitbike -->
-        <h3 class="text-3xl font-semibold mb-8">Pitbike</h3>
-        <div class="grid md:grid-cols-1 gap-8">
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 href class="text-xl font-semibold mb-2">Meppen</h4>
-            <img
+
+      <!-- Pitbike -->
+      <h2 class="text-3xl font-semibold mb-2">Pitbike</h2>
+      <p class="text-slate-400 mb-8">Unsere Lieblingsspielplätze für die kleinen Flitzer.</p>
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+          <img
             src="images/tracks/kartbahn_meppen.jpg"
             alt="kartbahn_meppen"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Die Kartbahn am <a href=https://circuitmeppen.driving-fun.com/de/ class="text-lime-500 text-decoration: underline hover:text-lime-600">Circuit Meppen</a> ist eine reine Achterbahn, wer viel Ausdauer hat und es genauso sehr liebt, wie wir durchgehend in Schräglage zu fahren, wird sich hier wohlfühlen. Mit knapp 725 Metern zählt die Kartbahnen zu den längsten in Europa. Ein weiterer Punkt, der uns immer wieder nach Meppen zieht, ist die Kombination aus einer Indoor- und Outdoorkartbahn.</p>
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-lg font-semibold mb-2">Meppen</h3>
+            <p class="text-slate-400 text-sm flex-1">Die Kartbahn am <a href="https://circuitmeppen.driving-fun.com/de/" class="text-lime-500 underline hover:text-lime-400 transition-colors">Circuit Meppen</a> ist eine reine Achterbahn — mit knapp 725 Metern eine der längsten in Europa. Wer durchgehend in Schräglage fahren will, ist hier genau richtig. Die Kombi aus Indoor und Outdoor zieht uns immer wieder her.</p>
+          </div>
         </div>
 
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 href class="text-xl font-semibold mb-2">Rheine</h4>
-            <img
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+          <img
             src="images/tracks/kartbahn_rheine.jpg"
             alt="kartbahn_rheine"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Im Vergleich zu den anderen Kartbahnen ist die <a href=https://www.diekartbahn-rheine.de/ class="text-lime-500 text-decoration: underline hover:text-lime-600">Kartbahn Rheine</a> eine kurze und enge Strecke. An Fahrspaß steht sie den anderen aber in nichts nach. Wer die Kontrolle über das Motorrad auch bei geringen Geschwindigkeiten verbessern will, ist hier genau richtig.</p>
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-lg font-semibold mb-2">Rheine</h3>
+            <p class="text-slate-400 text-sm flex-1">Die <a href="https://www.diekartbahn-rheine.de/" class="text-lime-500 underline hover:text-lime-400 transition-colors">Kartbahn Rheine</a> ist kurz und eng — aber an Fahrspaß steht sie den anderen in nichts nach. Wer die Kontrolle über das Motorrad auch bei geringen Geschwindigkeiten schärfen will, ist hier genau richtig.</p>
+          </div>
         </div>
 
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 href class="text-xl font-semibold mb-2">Wuppertal</h4>
-            <img
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+          <img
             src="images/tracks/kartbahn_wuppertal.jpg"
             alt="kartbahn_wuppertal"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Die <a href=https://www.speed-area.de/index.php class="text-lime-500 text-decoration: underline hover:text-lime-600">Speed-Area</a> in Wuppertal bietet uns regelmäßig die Möglichkeit, unser Können bis zur Grenze auszureizen. Die Indoor-Kartbahn bietet 480 Meter puren Fahrspaß und die Gruppen sind immer lustig. Kein Wunder, dass es uns hier alle zwei Wochen hinzieht.</p>
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-lg font-semibold mb-2">Wuppertal</h3>
+            <p class="text-slate-400 text-sm flex-1">Die <a href="https://www.speed-area.de/index.php" class="text-lime-500 underline hover:text-lime-400 transition-colors">Speed-Area</a> bietet 480 Meter puren Indoor-Fahrspaß — alle zwei Wochen. Die Gruppen sind immer lustig und das Können wird bis an die Grenze gebracht.</p>
+          </div>
         </div>
 
+      </div>
 
+      <!-- Rennstrecke -->
+      <h2 class="text-3xl font-semibold mb-2 pt-6 border-t border-slate-800">Rennstrecke</h2>
+      <p class="text-slate-400 mb-8">Wo der große Spaß beginnt.</p>
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
 
-        <!-- Rennstrecke -->
-        <h3 class="text-3xl font-semibold mb-8">Rennstrecke</h3>
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">Assen</h4>
-            <img
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+          <img
             src="images/tracks/strecke_assen.jpg"
             alt="strecke_assen"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Der <a href=https://www.ttcircuit.com/en class="text-lime-500 text-decoration: underline hover:text-lime-600">TT Circuit Assen</a> hat bei uns eine besondere Bedeutung. Eine sehr weitläufige Strecke, die wir auch als Zuschauer bei größeren Events immer wieder gerne besuchen.</p>
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-lg font-semibold mb-2">Assen</h3>
+            <p class="text-slate-400 text-sm flex-1">Der <a href="https://www.ttcircuit.com/en" class="text-lime-500 underline hover:text-lime-400 transition-colors">TT Circuit Assen</a> hat bei uns eine besondere Bedeutung. Eine weitläufige, historische Strecke — als Zuschauer wie als Fahrer immer ein Erlebnis.</p>
+          </div>
         </div>
 
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">Meppen</h4>
-            <img
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+          <img
             src="images/tracks/strecke_meppen.jpg"
             alt="strecke_meppen"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Der <a href=https://circuitmeppen.driving-fun.com/de/ class="text-lime-500 text-decoration: underline hover:text-lime-600">Circuit Meppen</a> ist eine 2,4 km lange, technisch anspruchsvolle Rennstrecke im Nordwesten Deutschlands, die besonders durch ihre herausfordernden Kurven besticht. Wir genießen das abwechslungsreiche Streckendesign, das sowohl Einsteiger als auch erfahrene Motorradfahrer fordert.<p>
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-lg font-semibold mb-2">Meppen</h3>
+            <p class="text-slate-400 text-sm flex-1">Der <a href="https://circuitmeppen.driving-fun.com/de/" class="text-lime-500 underline hover:text-lime-400 transition-colors">Circuit Meppen</a> — 2,4 km, technisch anspruchsvoll, mit herausfordernden Kurven. Das abwechslungsreiche Design fordert Einsteiger und Erfahrene gleichermaßen.</p>
+          </div>
         </div>
 
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">Oschersleben</h4>
-            <img
+        <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-lg flex flex-col">
+          <img
             src="images/tracks/strecke_oschersleben_2.jpg"
             alt="strecke_oschersleben"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Die <a href=https://www.motorsportarena.com/ class="text-lime-500 text-decoration: underline hover:text-lime-600">Motorsport Arena Oschersleben</a> ist Deutschlands nördlichste Rennstrecke und bietet mit ihrem modernen, kurvenreichen Layout anspruchsvollen Fahrspaß für Profis und Amateure gleichermaßen. Als Oase des deutschen Motorradsportes hat die Strecke unsere Herzen schon lange erobert.</p>
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-lg font-semibold mb-2">Oschersleben</h3>
+            <p class="text-slate-400 text-sm flex-1">Die <a href="https://www.motorsportarena.com/" class="text-lime-500 underline hover:text-lime-400 transition-colors">Motorsport Arena Oschersleben</a> — Deutschlands nördlichste Rennstrecke mit modernem, kurvenreichen Layout. Oase des deutschen Motorradsports.</p>
+          </div>
         </div>
 
-        <!--div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <h4 class="text-xl font-semibold mb-2">Zolder</h4>
-            <img
-            src=""
-            alt="strecke_zolder"
-            class="w-full h-84 object-cover rounded-xl mb-4"
-            />
-            <p class="text-slate-400">Der <a href=https://www.circuit-zolder.be/en/ class="text-lime-500 text-decoration: underline hover:text-lime-600">Circuit Zolder</a> in Belgien, bietet Fahrspaß mit schönen Kurven und einer hervorragenden Atmosphäre. Die Strecke bietet einige Geraden auf denen man auch mal ordentlich Gas geben kann.<p>
-        </div-->
+      </div>
 
-        <!-- Straße -->
-        <h3 class="text-3xl font-semibold mb-8">Straße</h3>
-        <div class="bg-slate-900 rounded-2xl p-6 shadow-lg">
-            <!--h4 class="text-xl font-semibold mb-2">Schräglage</h4-->
-            <p class="text-slate-400">Was gibt es schöneres als den Feierabend auf zwei Rädern zu verbringen? Richtig - Nichts!</p>
-            <p class="text-slate-400">Neben den Events auf Kartbahnen und Rennstrecken, sind wir auf den Landstraßen des Münster- und bergischen Landes zuhause.</p>
-        </div>
+      <!-- Straße -->
+      <h2 class="text-3xl font-semibold mb-2 pt-6 border-t border-slate-800">Straße</h2>
+      <p class="text-slate-400 mb-8">Das tägliche Revier.</p>
+      <div class="bg-slate-900 rounded-2xl p-8">
+        <p class="text-slate-300 text-lg mb-2">Was gibt es schöneres als den Feierabend auf zwei Rädern zu verbringen?</p>
+        <p class="text-lime-500 font-semibold mb-4">Richtig — Nichts.</p>
+        <p class="text-slate-400">Neben Events auf Kartbahnen und Rennstrecken sind wir auf den Landstraßen des Münster- und bergischen Landes zuhause.</p>
+      </div>
 
-        </div>
     </section>
 
   <!-- Footer -->
